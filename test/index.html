@@ -12,15 +12,12 @@
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 		<![endif]-->
-
-
-		</script>
 	</head>
 
 	<body>
 		Le fameux test avec un cadeau à la fin<br />
 		<canvas id = "myRadarChart"></canvas> <br />
-		
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 		<script type="text/javascript">
 			function handleIt() {
@@ -69,13 +66,13 @@
 
 				//Some options for chart
 				var options = {
-  					scale: {
-					        // Hides the scale
-					        display: true
+					scale: {
+						// Hides the scale
+						display: true
 					}
 				};
 
-				 var ctx = document.getElementById("mRadarChart");
+				var ctx = document.getElementById("mRadarChart");
 				//The chart is right here :-)
 				var myRadarChart = new Chart(ctx, {
 					type: 'radar',
@@ -93,6 +90,7 @@
 				console.log( (val1+val2+val3+val4+val5)/5 ); 
 				return ( (val1+val2+val3+val4+val5)/5 ); 
 			}
+		</script>
 
 		<form name="myform" action="javascript:handleIt()">
 			<p>
@@ -350,6 +348,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 		<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
 		<script src="http://www.chartjs.org/samples/latest/charts/area/analyser.js"></script> -->
-	
+
 	</body>
 </html>
