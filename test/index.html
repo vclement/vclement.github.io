@@ -325,8 +325,9 @@
 					}
 				};
 
+				 var ctx = document.getElementById("mRadarChart");
 				//The chart is right here :-)
-				var myRadarChart = new Chart('chart-0', {
+				var myRadarChart = new Chart(ctx, {
 					type: 'radar',
 					data: data,
 					options: options
