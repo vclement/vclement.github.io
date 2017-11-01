@@ -12,6 +12,82 @@
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 		<![endif]-->
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script type="text/javascript">
+			function handleIt() {
+				var v1 = parseInt(document.forms["myform"]["q1"].value);
+				var v2 = parseInt(document.forms["myform"]["q2"].value);
+				var v3 = parseInt(document.forms["myform"]["q3"].value);
+				var v4 = parseInt(document.forms["myform"]["q4"].value);
+				var v5 = parseInt(document.forms["myform"]["q5"].value);
+				var v  = calcul(v1,v2,v3,v4,v5);
+
+				var w1 = parseInt(document.forms["myform"]["q6"].value);
+				var w2 = parseInt(document.forms["myform"]["q7"].value);
+				var w3 = parseInt(document.forms["myform"]["q8"].value);
+				var w4 = parseInt(document.forms["myform"]["q9"].value);
+				var w5 = parseInt(document.forms["myform"]["q10"].value);
+				var w  = calcul(w1,w2,w3,w4,w5);
+
+				var x1 = parseInt(document.forms["myform"]["q11"].value);
+				var x2 = parseInt(document.forms["myform"]["q12"].value);
+				var x3 = parseInt(document.forms["myform"]["q13"].value);
+				var x4 = parseInt(document.forms["myform"]["q14"].value);
+				var x5 = parseInt(document.forms["myform"]["q15"].value);
+				var x  = calcul(x1,x2,x3,x4,x5);
+
+				var y1 = parseInt(document.forms["myform"]["q16"].value);
+				var y2 = parseInt(document.forms["myform"]["q17"].value);
+				var y3 = parseInt(document.forms["myform"]["q18"].value);
+				var y4 = parseInt(document.forms["myform"]["q19"].value);
+				var y5 = parseInt(document.forms["myform"]["q20"].value);
+				var y  = calcul(y1,y2,y3,y4,y5);
+
+				var z1 = parseInt(document.forms["myform"]["q21"].value);
+				var z2 = parseInt(document.forms["myform"]["q22"].value);
+				var z3 = parseInt(document.forms["myform"]["q23"].value);
+				var z4 = parseInt(document.forms["myform"]["q24"].value);
+				var z5 = parseInt(document.forms["myform"]["q25"].value);
+				var z  = calcul(z1,z2,z3,z4,z5);
+
+				//The datas are here
+				var data = {
+					labels: ['Adoration', 'Fraternité', 'Etre disciple', 'Service', 'Evangelisation'],
+					datasets: [{
+						data: [v,w,x,y,z]
+					}]
+				};
+
+				//Some options for chart
+				var options = {
+  					scale: {
+					        // Hides the scale
+					        display: true
+					}
+				};
+
+				 var ctx = document.getElementById("mRadarChart");
+				//The chart is right here :-)
+				var myRadarChart = new Chart(ctx, {
+					type: 'radar',
+					data: data,
+					options: options
+				});
+
+				//Some debugging functions
+				console.log("resultat: ", calcul(x,x1,x2,x3,x4));//La moyenne de tous les chiffres !
+				console.log("success");
+			}
+
+			//Cette fonction calcul la moyenne de chaque valeur.
+			function calcul(val1, val2, val3, val4, val5) {
+				console.log( (val1+val2+val3+val4+val5)/5 ); 
+				return ( (val1+val2+val3+val4+val5)/5 ); 
+			}
+		</script>
+
 	</head>
 
 	<body>
@@ -276,78 +352,7 @@
 	
 
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-		<script type="text/javascript">
-			function handleIt() {
-				var v1 = parseInt(document.forms["myform"]["q1"].value);
-				var v2 = parseInt(document.forms["myform"]["q2"].value);
-				var v3 = parseInt(document.forms["myform"]["q3"].value);
-				var v4 = parseInt(document.forms["myform"]["q4"].value);
-				var v5 = parseInt(document.forms["myform"]["q5"].value);
-				var v  = calcul(v1,v2,v3,v4,v5);
 
-				var w1 = parseInt(document.forms["myform"]["q6"].value);
-				var w2 = parseInt(document.forms["myform"]["q7"].value);
-				var w3 = parseInt(document.forms["myform"]["q8"].value);
-				var w4 = parseInt(document.forms["myform"]["q9"].value);
-				var w5 = parseInt(document.forms["myform"]["q10"].value);
-				var w  = calcul(w1,w2,w3,w4,w5);
 
-				var x1 = parseInt(document.forms["myform"]["q11"].value);
-				var x2 = parseInt(document.forms["myform"]["q12"].value);
-				var x3 = parseInt(document.forms["myform"]["q13"].value);
-				var x4 = parseInt(document.forms["myform"]["q14"].value);
-				var x5 = parseInt(document.forms["myform"]["q15"].value);
-				var x  = calcul(x1,x2,x3,x4,x5);
-
-				var y1 = parseInt(document.forms["myform"]["q16"].value);
-				var y2 = parseInt(document.forms["myform"]["q17"].value);
-				var y3 = parseInt(document.forms["myform"]["q18"].value);
-				var y4 = parseInt(document.forms["myform"]["q19"].value);
-				var y5 = parseInt(document.forms["myform"]["q20"].value);
-				var y  = calcul(y1,y2,y3,y4,y5);
-
-				var z1 = parseInt(document.forms["myform"]["q21"].value);
-				var z2 = parseInt(document.forms["myform"]["q22"].value);
-				var z3 = parseInt(document.forms["myform"]["q23"].value);
-				var z4 = parseInt(document.forms["myform"]["q24"].value);
-				var z5 = parseInt(document.forms["myform"]["q25"].value);
-				var z  = calcul(z1,z2,z3,z4,z5);
-
-				//The datas are here
-				var data = {
-					labels: ['Adoration', 'Fraternité', 'Etre disciple', 'Service', 'Evangelisation'],
-					datasets: [{
-						data: [v,w,x,y,z]
-					}]
-				};
-
-				//Some options for chart
-				var options = {
-  					scale: {
-					        // Hides the scale
-					        display: true
-					}
-				};
-
-				 var ctx = document.getElementById("mRadarChart");
-				//The chart is right here :-)
-				var myRadarChart = new Chart(ctx, {
-					type: 'radar',
-					data: data,
-					options: options
-				});
-
-				//Some debugging functions
-				console.log("resultat: ", calcul(x,x1,x2,x3,x4));//La moyenne de tous les chiffres !
-				console.log("success");
-			}
-
-			//Cette fonction calcul la moyenne de chaque valeur.
-			function calcul(val1, val2, val3, val4, val5) {
-				console.log( (val1+val2+val3+val4+val5)/5 ); 
-				return ( (val1+val2+val3+val4+val5)/5 ); 
-			}
-		</script>
 	</body>
 </html>
