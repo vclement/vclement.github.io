@@ -14,7 +14,14 @@
 		<![endif]-->
 
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		</script>
+	</head>
+
+	<body>
+		Le fameux test avec un cadeau à la fin<br />
+		<canvas id = "myRadarChart"></canvas> <br />
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 		<script type="text/javascript">
 			function handleIt() {
 				var v1 = parseInt(document.forms["myform"]["q1"].value);
@@ -86,11 +93,7 @@
 				console.log( (val1+val2+val3+val4+val5)/5 ); 
 				return ( (val1+val2+val3+val4+val5)/5 ); 
 			}
-		</script>
-	</head>
 
-	<body>
-		Le fameux test avec un cadeau à la fin<br />
 		<form name="myform" action="javascript:handleIt()">
 			<p>
 			<h2>Prière et Adoration : Vous avez été créés par amour et pour la joie de Dieu </h2>
@@ -339,7 +342,6 @@
 
 			<input name="Submit"  type="submit" value="Envoyer"/>
 
-			<canvas id = "myRadarChart"></canvas>
 		</form>
 
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
