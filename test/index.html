@@ -10,11 +10,11 @@
 
 		<link rel="stylesheet" href="css/styles.css?v=1.0">
 		<script type="text/javascript">
-		
-		      function handleIt() {
-		        alert("hello");
-		      }
-		
+
+			function handleIt() {
+				alert("hello");
+			}
+
 		</script>
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -26,6 +26,25 @@
 		The first page
 		<form name="myform" action="javascript:handleIt()">
 			<input name="Submit"  type="submit" value="Update"/>
+			<p>
+			<label for="pays">Dans quel pays habitez-vous ?</label><br />
+			<select name="pays" id="pays">
+				<optgroup label="Europe">
+					<option value="france">France</option>
+					<option value="espagne">Espagne</option>
+					<option value="italie">Italie</option>
+					<option value="royaume-uni">Royaume-Uni</option>
+				</optgroup>
+				<optgroup label="Amérique">
+					<option value="canada">Canada</option>
+					<option value="etats-unis">Etats-Unis</option>
+				</optgroup>
+				<optgroup label="Asie">
+					<option value="chine">Chine</option>
+					<option value="japon">Japon</option>
+				</optgroup>
+			</select>
+			</p>
 		</form>
 		<canvas id="myChart" width="400" height="400"></canvas>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js">
