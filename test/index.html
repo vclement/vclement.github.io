@@ -12,6 +12,7 @@
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 		<![endif]-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 	</head>
 
 	<body>
@@ -268,9 +269,8 @@
 
 		</form>
 
-		<canvas id = "myRadarChart"></canvas> <br />
+		<canvas id = "myRadarChart" width="1600" height="900"></canvas> <br />
 		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 		<script type="text/javascript">
 			function handleIt() {
 				var v1 = parseInt(document.forms["myform"]["q1"].value);
@@ -324,7 +324,7 @@
 					}
 				};
 
-				var ctx = document.getElementById("mRadarChart");
+				var ctx = document.getElementById("myRadarChart");
 				//The chart is right here :-)
 				var myRadarChart = new Chart(ctx, {
 					type: 'radar',
