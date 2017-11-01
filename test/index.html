@@ -301,7 +301,7 @@
 				var z5 = parseInt(document.forms["myform"]["q25"].value);
 				var z  = calcul(z1,z2,z3,z4,z5);
 
-
+				//The datas are here
 				data: {
 					labels: ['Adoration', 'Fraternité', 'Etre disciple', 'Service', 'Evangelisation'],
 						datasets: [{
@@ -310,18 +310,23 @@
 							data: [v,w,x,y,z]
 						}]
 				};
+
+				//Some options for chart
 				options = {
   					scale: {
 					        // Hides the scale
 					        display: false
 					}
 				};
+
+				//The chart is right here :-)
 				var myRadarChart = new Chart(ctx, {
 					type: 'radar',
 					data: data,
 					options: options
 				});
 
+				//Some debugging functions
 				console.log("resultat: ", calcul(x,x1,x2,x3,x4));//La moyenne de tous les chiffres !
 				console.log("success");
 			}
