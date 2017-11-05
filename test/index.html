@@ -276,8 +276,8 @@
 					red: 'rgb(255, 99, 132)',
 					orange: 'rgb(255, 159, 64)',
 					yellow: 'rgb(255, 205, 86)',
-					green: 'rgb(0, 204, 0)',
-					blackgreen: 'rgb(0, 100, 0)',
+					green: 'rgb(0, 175, 0)',
+					blackgreen: 'rgb(0, 99, 0)',
 					blue: 'rgb(54, 162, 235)',
 					purple: 'rgb(153, 102, 255)',
 					grey: 'rgb(231,233,237)'
@@ -323,7 +323,7 @@
 					labels: ['Adoration', 'Fraternité', 'Etre disciple', 'Service', 'Evangelisation'],
 					datasets: [{
 						backgroundColor: window.chartColors.green,
-						borderColor: window.chartColors.red,
+						borderColor: window.chartColors.blackgreen,
 						data: [v,w,x,y,z],
 						label: 'sante spi'
 					}]
@@ -335,6 +335,11 @@
 						display: true,
 						maintainAspectRatio: false,
 						spanGaps: true,
+						ticks: {
+							// changes here
+							min: 1,
+							max: 5
+        					}
 					}
 				};
 
