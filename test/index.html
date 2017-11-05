@@ -351,6 +351,9 @@
 					data: data,
 					options: options
 				});
+	
+				chart.options.plugins.filler.propagate = value;
+				chart.update();
 
 				//Some debugging functions
 				console.log("resultat: ", calcul(x,x1,x2,x3,x4));//La moyenne de tous les chiffres !
@@ -363,12 +366,6 @@ function calcul(val1, val2, val3, val4, val5) {
 	return ( (val1+val2+val3+val4+val5)/5 ); 
 }
 		</script>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-		<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-		<script src="http://www.chartjs.org/samples/latest/charts/area/analyser.js"></script> -->
 
 	</body>
 </html>
