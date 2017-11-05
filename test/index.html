@@ -276,7 +276,7 @@
 					red: 'rgb(255, 99, 132)',
 					orange: 'rgb(255, 159, 64)',
 					yellow: 'rgb(255, 205, 86)',
-					green: 'rgb(0, 175, 0)',
+					green: 'rgba(0, 175, 0, 0.5)',
 					blackgreen: 'rgb(0, 99, 0)',
 					blue: 'rgb(54, 162, 235)',
 					purple: 'rgb(153, 102, 255)',
@@ -322,7 +322,7 @@
 				var data = {
 					labels: ['Adoration', 'Fraternité', 'Etre disciple', 'Service', 'Evangelisation'],
 					datasets: [{
-						backgroundColor: utils.transparentize(window.chartColors.green),
+						backgroundColor: window.chartColors.green,
 						borderColor: window.chartColors.blackgreen,
 						data: [v,w,x,y,z],
 						label: 'sante spi'
