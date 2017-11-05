@@ -269,9 +269,18 @@
 		</form>
 
 		<canvas id = "myRadarChart" width="1600" height="900"></canvas> <br />
-		
+
 		<script type="text/javascript">
 			function handleIt() {
+				window.chartColors = {
+					red: 'rgb(255, 99, 132)',
+					orange: 'rgb(255, 159, 64)',
+					yellow: 'rgb(255, 205, 86)',
+					green: 'rgb(75, 192, 192)',
+					blue: 'rgb(54, 162, 235)',
+					purple: 'rgb(153, 102, 255)',
+					grey: 'rgb(231,233,237)'
+				};
 				var v1 = parseInt(document.forms["myform"]["q1"].value);
 				var v2 = parseInt(document.forms["myform"]["q2"].value);
 				var v3 = parseInt(document.forms["myform"]["q3"].value);
@@ -340,11 +349,11 @@
 				console.log("success"); //Really ?
 			}
 
-			//Cette fonction calcul la moyenne de chaque valeur.
-			function calcul(val1, val2, val3, val4, val5) {
-				console.log( (val1+val2+val3+val4+val5)/5 ); 
-				return ( (val1+val2+val3+val4+val5)/5 ); 
-			}
+//Cette fonction calcul la moyenne de chaque valeur.
+function calcul(val1, val2, val3, val4, val5) {
+	console.log( (val1+val2+val3+val4+val5)/5 ); 
+	return ( (val1+val2+val3+val4+val5)/5 ); 
+}
 		</script>
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
