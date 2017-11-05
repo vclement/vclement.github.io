@@ -283,7 +283,6 @@
 					grey: 'rgb(231,233,237)'
 				};
 
-
 				var v1 = parseInt(document.forms["myform"]["q1"].value);
 				var v2 = parseInt(document.forms["myform"]["q2"].value);
 				var v3 = parseInt(document.forms["myform"]["q3"].value);
@@ -319,6 +318,7 @@
 				var z5 = parseInt(document.forms["myform"]["q25"].value);
 				var z  = calcul(z1,z2,z3,z4,z5);
 
+				//The datas
 				var data = {
 					labels: ['Adoration', 'Fraternité', 'Etre disciple', 'Service', 'Evangelisation'],
 					datasets: [{
@@ -329,10 +329,8 @@
 					}]
 				};
 
-				//Some options for chart
 				var options = {
 					scale: {
-						// Hides the scale
 						display: true,
 						maintainAspectRatio: false,
 						spanGaps: true,
