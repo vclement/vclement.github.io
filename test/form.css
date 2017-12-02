@@ -2,6 +2,7 @@
 
 body {
 	font-family: "Noto", "Verdana";
+	font-size:115%;
 }
 
 h2 {
@@ -19,7 +20,7 @@ form{
 	border: none;
 	position: absolute;
 	text-align: center;
-	right: 35%;
+	right: 30%;
 	cursor: pointer;
 	display: inline-block;
 	-webkit-appearance: none;
