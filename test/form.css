@@ -27,6 +27,8 @@ form{
 	-moz-appearance: none;
 	/*appearance: none;*/
 }
+
+/* label for forms */
 label {
 	margin-left:5%;
 	display:inline;
