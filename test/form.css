@@ -1,0 +1,32 @@
+/* Some CSS YEAH */
+
+body {
+	font-family: "Noto", "Verdana";
+}
+
+h2 {
+	color: maroon;
+	margin-left: 40px;
+}
+
+form{
+	left:10%;
+	width:100%;
+}
+
+#ado, #frat, #dis, #ser, #eva {
+	background-color:#d3d3d3;
+	border: none;
+	position: absolute;
+	text-align: center;
+	right: 35%;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	/*appearance: none;*/
+}
+label {
+	margin-left:5%;
+	display:inline;
+}
